@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pioneer Impact Partners · Open Architecture for Impact Finance</title>
+
+  <!-- Google Fonts: Montserrat & Source Sans 3 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#113157',
+            midnight: '#0A1E36',
+            steelblue: '#2B5B8C',
+            ink: '#1C2433',
+            slate: '#5B6675',
+            hairline: '#D9DEE5',
+            mist: '#F4F6F8',
+            icetint: '#EBF0F5',
+            paper: '#FFFFFF',
+          },
+          fontFamily: {
+            display: ['Montserrat', 'Arial', 'Helvetica Neue', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'Calibri', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '2px',
+            md: '4px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Crisp architectural typography & negative-space discipline */
+    body {
+      color: #1C2433;
+      background-color: #FFFFFF;
+      font-family: 'Source Sans 3', 'Calibri', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Montserrat', 'Arial', 'Helvetica Neue', sans-serif;
+    }
+    .kicker {
+      font-family: 'Montserrat', 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .arch-grid {
+      background-size: 28px 28px;
+      background-image:
+        linear-gradient(to right, rgba(217, 222, 229, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(217, 222, 229, 0.45) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink selection:bg-navy selection:text-paper overflow-x-hidden">
+
+  <!-- ===================================================================== -->
+  <!-- 1. TOP NAVIGATION BAR                                                 -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-sm border-b border-hairline">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Brand Lockup: PIP Monogram + Wordmark -->
+        <a href="#" class="flex items-center gap-3.5 group focus:outline-none shrink-0">
+          <!-- Crisp Institutional Navy PIP Monogram Mark -->
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" aria-label="Pioneer Impact Partners Monogram" class="shrink-0">
+            <rect x="8" y="8" width="22" height="84" fill="#113157"/>
+            <path d="M38 8H66C82.5685 8 96 21.4315 96 38C96 54.5685 82.5685 68 66 68H38V48H65C70.5228 48 75 43.5228 75 38C75 32.4772 70.5228 28 65 28H38V8Z" fill="#113157"/>
+            <rect x="38" y="76" width="42" height="16" fill="#113157"/>
+          </svg>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-sm sm:text-base tracking-tight text-navy leading-none">
+              PIONEER IMPACT PARTNERS
+            </span>
+            <span class="hidden sm:block font-display font-semibold text-[10px] tracking-[0.14em] uppercase text-slate mt-1">
+              Open Architecture for Impact Finance
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center space-x-6" aria-label="Primary Navigation">
+          <a href="#thesis" class="text-sm font-semibold text-ink hover:text-steelblue transition-colors">Thesis</a>
+          <a href="#open-architecture" class="text-sm font-semibold text-ink hover:text-steelblue transition-colors">Open Architecture</a>
+          <a href="#oifi" class="text-sm font-semibold text-ink hover:text-steelblue transition-colors">OIFI</a>
+          <a href="#advisory" class="text-sm font-semibold text-ink hover:text-steelblue transition-colors">Advisory &amp; Governance</a>
+          <a href="#leadership" class="text-sm font-semibold text-ink hover:text-steelblue transition-colors">Leadership</a>
+          <a href="#contact" class="text-sm font-semibold text-ink hover:text-steelblue transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Utility Actions: LinkedIn Link + Contact CTA + Mobile Toggle -->
+        <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <a
+            href="https://www.linkedin.com/company/pioneer-impact-partners/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pioneer Impact Partners on LinkedIn"
+            class="hidden md:inline-flex items-center gap-1.5 border border-hairline hover:border-navy text-navy font-display font-semibold text-xs tracking-[0.08em] uppercase px-3.5 py-3 rounded-sm transition-colors"
+          >
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 17.34V10.67H6.12V17.34H8.34ZM7.23 9.75C8.01 9.75 8.5 9.23 8.5 8.58C8.48 7.92 8.01 7.42 7.25 7.42C6.48 7.42 6 7.92 6 8.58C6 9.23 6.47 9.75 7.22 9.75H7.23ZM18 17.34V13.56C18 11.53 16.92 10.59 15.48 10.59C14.32 10.59 13.8 11.23 13.51 11.68V10.67H11.3C11.33 11.27 11.3 17.34 11.3 17.34H13.51V13.62C13.51 13.42 13.53 13.22 13.59 13.08C13.75 12.68 14.11 12.27 14.72 12.27C15.51 12.27 15.83 12.87 15.83 13.75V17.34H18Z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href="#contact"
+            class="bg-navy hover:bg-midnight text-paper font-display font-semibold text-xs tracking-[0.1em] uppercase px-4 sm:px-5 py-3 rounded-sm transition-colors"
+          >
+            Connect
+          </a>
+
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="xl:hidden p-2.5 border border-hairline text-navy hover:bg-mist rounded-sm focus:outline-none"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Toggle Navigation Menu"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="square" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-paper border-t border-hairline">
+      <div class="px-4 pt-3 pb-5 space-y-1.5">
+        <a href="#thesis" class="mobile-nav-link block py-2.5 px-3 text-base font-semibold text-ink hover:bg-mist border-l-2 border-transparent hover:border-navy">Thesis</a>
+        <a href="#open-architecture" class="mobile-nav-link block py-2.5 px-3 text-base font-semibold text-ink hover:bg-mist border-l-2 border-transparent hover:border-navy">Open Architecture</a>
+        <a href="#oifi" class="mobile-nav-link block py-2.5 px-3 text-base font-semibold text-ink hover:bg-mist border-l-2 border-transparent hover:border-navy">OIFI</a>
+        <a href="#advisory" class="mobile-nav-link block py-2.5 px-3 text-base font-semibold text-ink hover:bg-mist border-l-2 border-transparent hover:border-navy">Advisory &amp; Governance</a>
+        <a href="#leadership" class="mobile-nav-link block py-2.5 px-3 text-base font-semibold text-ink hover:bg-mist border-l-2 border-transparent hover:border-navy">Leadership</a>
+        <a href="#contact" class="mobile-nav-link block py-2.5 px-3 text-base font-semibold text-ink hover:bg-mist border-l-2 border-transparent hover:border-navy">Contact</a>
+        <div class="pt-3 mt-2 border-t border-hairline flex items-center justify-between px-3">
+          <a href="https://www.linkedin.com/company/pioneer-impact-partners/" target="_blank" rel="noopener noreferrer" class="text-xs font-display font-semibold uppercase tracking-[0.1em] text-steelblue hover:text-navy">
+            LinkedIn Page &rarr;
+          </a>
+          <a href="mailto:connect@pioneerimpactpartners.com" class="text-xs font-semibold text-slate hover:text-navy">
+            connect@pioneerimpactpartners.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================================================================== -->
+    <!-- 2. HERO SECTION                                                       -->
+    <!-- ===================================================================== -->
+    <section class="bg-paper border-b border-hairline">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+
+          <!-- Left Column: Core Thesis Statement & Actions -->
+          <div class="lg:col-span-7 space-y-7">
+            <div class="inline-flex items-center gap-2.5 bg-icetint border-l-4 border-navy px-4 py-2">
+              <span class="kicker text-navy">Pioneer Impact Partners &middot; Open Architecture for Impact Finance</span>
+            </div>
+
+            <h1 class="font-display font-bold text-3xl sm:text-5xl lg:text-[52px] lg:leading-[58px] text-navy tracking-tight">
+              Capital for sustainable development is scarce. Market infrastructure to facilitate capital for development remains costly and bespoke.
+            </h1>
+
+            <p class="text-lg sm:text-xl text-ink leading-relaxed max-w-2xl">
+              Pioneer Impact Partners champions open, reusable financial and legal market architecture to drive capital where it is most impactful.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a
+                href="oifi.html"
+                class="bg-navy hover:bg-midnight text-paper font-display font-semibold text-xs tracking-[0.12em] uppercase px-7 py-4 text-center rounded-sm transition-colors"
+              >
+                Explore the OIFI Site &rarr;
+              </a>
+              <a
+                href="#contact"
+                class="bg-paper hover:bg-mist text-navy border border-navy font-display font-semibold text-xs tracking-[0.12em] uppercase px-7 py-4 text-center rounded-sm transition-colors"
+              >
+                Connect With PIP
+              </a>
+            </div>
+
+            <div class="pt-4 border-t border-hairline flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate">
+              <span class="font-semibold text-ink">Public-Interest Market Architecture</span>
+              <span>&bull;</span>
+              <span>Senior Practitioner Advisory</span>
+              <span>&bull;</span>
+              <a href="mailto:connect@pioneerimpactpartners.com" class="text-steelblue hover:text-navy font-semibold">
+                connect@pioneerimpactpartners.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Architectural Structural Field -->
+          <div class="lg:col-span-5">
+            <div class="border border-hairline bg-mist arch-grid p-6 sm:p-8 relative rounded-md">
+              <div class="h-1 bg-navy w-full mb-6"></div>
+
+              <div class="flex items-center justify-between pb-3 mb-6 border-b border-hairline">
+                <span class="kicker text-steelblue">Institutional Mandate</span>
+                <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-slate">PIP Architecture</span>
+              </div>
+
+              <div class="space-y-4">
+                <div class="bg-paper border border-hairline p-4 rounded-sm">
+                  <div class="text-[11px] font-display font-semibold uppercase tracking-[0.1em] text-slate">Constraint</div>
+                  <div class="font-display font-bold text-sm text-navy mt-1">
+                    Contracting Concessional Capital &amp; High Transaction Friction
+                  </div>
+                </div>
+
+                <div class="bg-navy text-paper p-5 rounded-sm">
+                  <div class="text-[11px] font-display font-semibold uppercase tracking-[0.12em] text-icetint">OPEN ARCHITECTURE</div>
+                  <div class="font-display font-bold text-base text-paper mt-1">
+                    Reusable Financial, Legal and Governance Rails
+                  </div>
+                  <p class="text-xs text-paper/80 mt-2 leading-relaxed">
+                    Designed to facilitate learnings from each closed transaction in order to lower cost, effort and time required for subsequent transactions across emerging and developing markets.
+                  </p>
+                </div>
+
+                <div class="bg-paper border border-hairline p-4 rounded-sm">
+                  <div class="text-[11px] font-display font-semibold uppercase tracking-[0.1em] text-slate">Practitioner Capacity</div>
+                  <div class="font-display font-bold text-sm text-navy mt-1">
+                    Senior Advisors for Initiatives, Funds &amp; Institutions
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-3 border-t border-hairline flex items-center justify-between text-[11px] text-slate">
+                <span>Neutral Steward &amp; Advisor</span>
+                <span class="font-semibold text-navy">PIP v1.0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. THESIS SECTION: 01 · THE BINDING CONSTRAINT                      -->
+    <!-- ===================================================================== -->
+    <section id="thesis" class="bg-mist border-b border-hairline py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <div class="kicker text-steelblue mb-2">01 &middot; The Binding Constraint</div>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-navy leading-tight">
+            Concessional capital is contracting while bespoke innovations for development finance continue to be costly
+          </h2>
+          <p class="text-base sm:text-lg text-ink mt-4 leading-relaxed">
+            Concessional capital is contracting while bespoke innovations for development finance continue to be costly. Sustainable development requires far more capital than current multilateral funding sources alone can supply. Complex market systems for capital raising, repeated due diligence and custom structuring slow deployment, raise costs and slow execution timing.
+          </p>
+        </div>
+
+        <!-- 4 Empirical Stat Blocks -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Metric 1 -->
+          <div class="bg-paper border border-hairline p-6 sm:p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-navy mb-5"></div>
+              <div class="font-display font-bold text-3xl sm:text-[40px] leading-tight text-navy tracking-tight">
+                USD 4 trillion
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-3 leading-snug">
+                Annual sustainable development investment gap in developing countries.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-hairline text-[11px] text-slate">
+              Source: UNCTAD
+            </div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="bg-paper border border-hairline p-6 sm:p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-navy mb-5"></div>
+              <div class="font-display font-bold text-3xl sm:text-[40px] leading-tight text-navy tracking-tight">
+                &ndash;23.1%
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-3 leading-snug">
+                Fall in net Official Development Assistance in 2025 to USD 174.3 billion.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-hairline text-[11px] text-slate">
+              Source: OECD, 2026
+            </div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="bg-paper border border-hairline p-6 sm:p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-navy mb-5"></div>
+              <div class="font-display font-bold text-3xl sm:text-[40px] leading-tight text-navy tracking-tight">
+                200+
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-3 leading-snug">
+                Bespoke blended-finance structures operating across divergent institutional mandates.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-hairline text-[11px] text-slate">
+              Source: OECD, 2026
+            </div>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="bg-paper border border-hairline p-6 sm:p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-steelblue mb-5"></div>
+              <div class="font-display font-bold text-3xl sm:text-[40px] leading-tight text-navy tracking-tight">
+                2–3&times;
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-3 leading-snug">
+                Cost-of-capital penalty in developing markets compared with advanced economies.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-hairline text-[11px] text-slate">
+              Source: IEA, 2025
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Thesis Synthesis Band -->
+        <div class="mt-8 bg-paper border border-hairline p-6 sm:p-8 rounded-md">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-hairline">
+            <div class="pt-4 md:pt-0 first:pt-0">
+              <div class="text-xs font-display font-bold uppercase tracking-wider text-navy">Tighter Concessional Supply</div>
+              <p class="text-sm text-slate mt-1.5 leading-relaxed">
+                With grant and concessional resources under pressure, conversion efficiency—how much capital moves and how quickly it deploys—is decisive.
+              </p>
+            </div>
+            <div class="pt-4 md:pt-0 md:pl-6">
+              <div class="text-xs font-display font-bold uppercase tracking-wider text-navy">High Friction on Every Deal</div>
+              <p class="text-sm text-slate mt-1.5 leading-relaxed">
+                Re-negotiating legal terms, underwriting rules and governance arrangements from scratch adds fixed costs that slow or block transactions.
+              </p>
+            </div>
+            <div class="pt-4 md:pt-0 md:pl-6">
+              <div class="text-xs font-display font-bold uppercase tracking-wider text-navy">Infrastructure Over One-Offs</div>
+              <p class="text-sm text-slate mt-1.5 leading-relaxed">
+                Building shared market infrastructure reduces repeated effort across transactions rather than solving only one deal at a time.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. CORE DESIGN PRINCIPLE: 02 · HOW WE BUILD                           -->
+    <!-- ===================================================================== -->
+    <section id="open-architecture" class="bg-paper border-b border-hairline py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <div class="kicker text-steelblue mb-2">02 &middot; How We Build</div>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-navy leading-tight">
+            Open architecture as a core design principle
+          </h2>
+          <p class="text-base sm:text-lg text-ink mt-4 leading-relaxed">
+            <strong>OPEN ARCHITECTURE:</strong> Reusable Financial, Legal and Governance Rails. Designed to facilitate learnings from each closed transaction in order to lower cost, effort and time required for subsequent transactions across emerging and developing markets.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Principle 1 -->
+          <div class="border border-hairline bg-mist p-6 sm:p-8 rounded-md">
+            <div class="flex items-center justify-between mb-4">
+              <span class="kicker text-steelblue">Principle 01</span>
+              <span class="w-6 h-1 bg-navy"></span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy">Reuse over reinvention</h3>
+            <p class="text-[15px] text-ink mt-2.5 leading-relaxed">
+              Preserve analytical, legal and structuring work that can be shared across transactions, making jurisdictional and risk differences explicit while reserving specialized judgment for questions specific to a deal.
+            </p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="border border-hairline bg-mist p-6 sm:p-8 rounded-md">
+            <div class="flex items-center justify-between mb-4">
+              <span class="kicker text-steelblue">Principle 02</span>
+              <span class="w-6 h-1 bg-navy"></span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy">Interoperability without uniformity</h3>
+            <p class="text-[15px] text-ink mt-2.5 leading-relaxed">
+              Enable institutions with distinct mandates, legal systems and risk appetites to work from shared standards without imposing rigid one-size-fits-all templates (IPSF, 2026).
+            </p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="border border-hairline bg-mist p-6 sm:p-8 rounded-md">
+            <div class="flex items-center justify-between mb-4">
+              <span class="kicker text-steelblue">Principle 03</span>
+              <span class="w-6 h-1 bg-navy"></span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy">Continuous policy-to-practice feedback</h3>
+            <p class="text-[15px] text-ink mt-2.5 leading-relaxed">
+              Keep policy frameworks, taxonomies and institutional rules connected to real-world execution so market rules reflect practical deal realities and transactions align with governing frameworks.
+            </p>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="border border-hairline bg-mist p-6 sm:p-8 rounded-md">
+            <div class="flex items-center justify-between mb-4">
+              <span class="kicker text-steelblue">Principle 04</span>
+              <span class="w-6 h-1 bg-navy"></span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy">Open public goods by default</h3>
+            <p class="text-[15px] text-ink mt-2.5 leading-relaxed">
+              Publish open architecture openly for broad ecosystem adoption rather than locking value inside proprietary structures, lowering friction for subsequent market participants.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. MARQUEE INITIATIVE: 03 · MARQUEE INITIATIVE (OIFI)               -->
+    <!-- ===================================================================== -->
+    <section id="oifi" class="bg-mist border-b border-hairline py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="bg-paper border border-hairline rounded-md overflow-hidden">
+          <div class="h-1 bg-navy w-full"></div>
+          <div class="p-8 sm:p-12 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            <div class="lg:col-span-8 space-y-5">
+              <div class="kicker text-steelblue">03 &middot; Marquee Initiative</div>
+              <h2 class="font-display font-bold text-2xl sm:text-4xl text-navy leading-tight">
+                Open Impact Finance Initiative (OIFI)
+              </h2>
+              <p class="text-base sm:text-lg text-ink leading-relaxed">
+                Conceived by Pioneer Impact Partners, the <strong>Open Impact Finance Initiative (OIFI)</strong> advances open financial and legal architecture to connect sustainable finance policy with practical transaction execution.
+              </p>
+              <p class="text-base text-ink leading-relaxed">
+                OIFI is focused on building a broad coalition of <strong>ecosystem supporters, knowledge partners and practitioner collaborators</strong>—including development finance institutions, commercial banks, insurers, legal practitioners and researchers—to test open architecture in practice and share market insights. Full details on OIFI’s architecture and instruments are maintained on the dedicated OIFI site.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 bg-icetint border border-hairline p-6 sm:p-7 rounded-md space-y-5">
+              <div class="kicker text-navy">Ecosystem Coalition</div>
+              <ul class="space-y-2.5 text-sm text-ink">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 bg-navy mt-2 shrink-0"></span>
+                  <span><strong>Ecosystem supporters</strong> advancing open market infrastructure</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 bg-navy mt-2 shrink-0"></span>
+                  <span><strong>Knowledge partners</strong> contributing research, data and benchmarks</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 bg-navy mt-2 shrink-0"></span>
+                  <span><strong>Practitioner collaborators</strong> stress-testing workflows across markets</span>
+                </li>
+              </ul>
+
+              <div class="pt-2">
+                <a
+                  href="oifi.html"
+                  class="block w-full text-center bg-navy hover:bg-midnight text-paper font-display font-semibold text-xs tracking-[0.12em] uppercase px-6 py-4 rounded-sm transition-colors"
+                >
+                  Visit the OIFI Site &rarr;
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. ADVISORY & GOVERNANCE: 04 · ADVISORY & COLLABORATION             -->
+    <!-- ===================================================================== -->
+    <section id="advisory" class="bg-paper border-b border-hairline py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <div class="kicker text-steelblue mb-2">04 &middot; Advisory &amp; Collaboration</div>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-navy leading-tight">
+            Senior practitioner advisory for complex market initiatives
+          </h2>
+          <p class="text-base sm:text-lg text-ink mt-4 leading-relaxed">
+            Pioneer Impact Partners acts as a strategic advisor and consulting partner to foundations, funds, public institutions and emerging initiatives seeking senior-level practitioners with finance, legal, governance, policy, research and impact experience.
+          </p>
+        </div>
+
+        <!-- Six Integrated Advisory Capabilities -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="border border-hairline bg-paper p-6 rounded-md">
+            <div class="text-xs font-display font-bold uppercase tracking-wider text-steelblue">01 &middot; Finance</div>
+            <h3 class="font-display font-bold text-base text-navy mt-1.5">Finance &amp; Risk Architecture</h3>
+            <p class="text-sm text-ink mt-2 leading-relaxed">
+              Structuring open financial architectures, risk-sharing frameworks, credit-enhancement concepts and standardized instrument designs that reduce execution friction.
+            </p>
+          </div>
+
+          <div class="border border-hairline bg-paper p-6 rounded-md">
+            <div class="text-xs font-display font-bold uppercase tracking-wider text-steelblue">02 &middot; Governance</div>
+            <h3 class="font-display font-bold text-base text-navy mt-1.5">Governance &amp; Institutional Design</h3>
+            <p class="text-sm text-ink mt-2 leading-relaxed">
+              Designing multi-stakeholder governance models, consortium charters, open-stewardship arrangements, decision rights and accountability structures for initiatives and facilities.
+            </p>
+          </div>
+
+          <div class="border border-hairline bg-paper p-6 rounded-md">
+            <div class="text-xs font-display font-bold uppercase tracking-wider text-steelblue">03 &middot; Legal</div>
+            <h3 class="font-display font-bold text-base text-navy mt-1.5">Legal Architecture &amp; Standardization</h3>
+            <p class="text-sm text-ink mt-2 leading-relaxed">
+              Developing standardized contracting frameworks, modular documentation approaches, cross-border legal harmonization and regulatory alignment models.
+            </p>
+          </div>
+
+          <div class="border border-hairline bg-paper p-6 rounded-md">
+            <div class="text-xs font-display font-bold uppercase tracking-wider text-steelblue">04 &middot; Policy</div>
+            <h3 class="font-display font-bold text-base text-navy mt-1.5">Policy &amp; Multilateral Alignment</h3>
+            <p class="text-sm text-ink mt-2 leading-relaxed">
+              Aligning initiative design and market workflows with sustainable finance taxonomies, national priorities and multilateral development bank or fund governance.
+            </p>
+          </div>
+
+          <div class="border border-hairline bg-paper p-6 rounded-md">
+            <div class="text-xs font-display font-bold uppercase tracking-wider text-steelblue">05 &middot; Research</div>
+            <h3 class="font-display font-bold text-base text-navy mt-1.5">Empirical Research &amp; Diagnostics</h3>
+            <p class="text-sm text-ink mt-2 leading-relaxed">
+              Conducting bottleneck diagnostics, transaction-cost baselining, additionality frameworks and market evidence synthesis grounded in real-world practice.
+            </p>
+          </div>
+
+          <div class="border border-hairline bg-paper p-6 rounded-md">
+            <div class="text-xs font-display font-bold uppercase tracking-wider text-steelblue">06 &middot; Impact</div>
+            <h3 class="font-display font-bold text-base text-navy mt-1.5">Impact &amp; Market Standards</h3>
+            <p class="text-sm text-ink mt-2 leading-relaxed">
+              Translating environmental, resilience and social integrity criteria into practical, auditable operational standards that institutions can adopt at scale.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Mandatory Advisory Scope & Non-Licensure Disclaimer -->
+        <div class="mt-8 bg-icetint border border-hairline border-l-4 border-l-navy p-5 sm:p-6 rounded-md">
+          <div class="text-xs font-display font-bold uppercase tracking-wider text-navy mb-1">
+            Advisory Scope &amp; Regulatory Boundary
+          </div>
+          <p class="text-sm text-ink leading-relaxed">
+            Pioneer Impact Partners provides strategic, institutional and market-architecture advisory services. PIP is not a registered broker-dealer, investment adviser or law firm, and does not provide advice requiring securities licenses, formal investment advice, securities placement or formal legal representation.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. LEADERSHIP: 05 · PRACTITIONER LEADERSHIP                           -->
+    <!-- ===================================================================== -->
+    <section id="leadership" class="bg-mist border-b border-hairline py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <div class="kicker text-steelblue mb-2">05 &middot; Practitioner Leadership</div>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-navy leading-tight">
+            Led by senior practitioners across finance, standards and law
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Emily Kreps -->
+          <article class="bg-paper border border-hairline p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-navy mb-5"></div>
+              <h3 class="font-display font-bold text-lg text-navy">Emily Kreps</h3>
+              <div class="text-xs font-display font-semibold uppercase tracking-wider text-steelblue mt-1">
+                Financial &amp; Market Architecture
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-4 leading-relaxed">
+                Former Global Head of ESG and Sustainable Finance at Deutsche Bank and former Global Director at CDP, with extensive experience across capital markets, sustainable finance structuring and market standards.
+              </p>
+            </div>
+          </article>
+
+          <!-- Nicolette (Nikki) Bartlett -->
+          <article class="bg-paper border border-hairline p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-navy mb-5"></div>
+              <h3 class="font-display font-bold text-lg text-navy">Nicolette (Nikki) Bartlett</h3>
+              <div class="text-xs font-display font-semibold uppercase tracking-wider text-steelblue mt-1">
+                Research, Standards &amp; Adoption
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-4 leading-relaxed">
+                Former Chief Impact Officer at CDP and founding trustee of the Science Based Targets initiative (SBTi), bringing two decades of leadership in research frameworks, impact standards and institutional adoption.
+              </p>
+            </div>
+          </article>
+
+          <!-- Elizabeth Small -->
+          <article class="bg-paper border border-hairline p-7 rounded-md flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-1 bg-navy mb-5"></div>
+              <h3 class="font-display font-bold text-lg text-navy">Elizabeth Small</h3>
+              <div class="text-xs font-display font-semibold uppercase tracking-wider text-steelblue mt-1">
+                Legal &amp; Governance Architecture
+              </div>
+              <p class="text-sm sm:text-[15px] text-ink mt-4 leading-relaxed">
+                Former Chief Legal Officer and Head of ESG at the Global Energy Alliance for People and Planet (GEAPP) and experienced commercial litigator, specializing in cross-border legal structures, governance and institutional partnerships.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. CONTACT & INQUIRY SECTION                                          -->
+    <!-- ===================================================================== -->
+    <section id="contact" class="bg-paper py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+          <!-- Left Column: Direct Contact & LinkedIn -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <div class="kicker text-steelblue mb-2">06 &middot; Contact</div>
+              <h2 class="font-display font-bold text-2xl sm:text-3xl text-navy leading-tight">
+                Connect with Pioneer Impact Partners
+              </h2>
+              <p class="text-base text-ink mt-3 leading-relaxed">
+                Reach out regarding open market architecture, advisory and governance engagements or OIFI ecosystem collaboration.
+              </p>
+            </div>
+
+            <div class="border border-hairline bg-mist p-6 rounded-md space-y-5">
+              <div>
+                <div class="text-xs font-display font-semibold uppercase tracking-wider text-slate">Direct Email</div>
+                <div class="mt-1 flex flex-wrap items-center gap-3">
+                  <a
+                    href="mailto:connect@pioneerimpactpartners.com"
+                    class="font-display font-bold text-base text-navy hover:text-steelblue transition-colors break-all"
+                  >
+                    connect@pioneerimpactpartners.com
+                  </a>
+                  <button
+                    id="copy-email-btn"
+                    type="button"
+                    class="text-xs font-display font-semibold uppercase tracking-wider bg-paper border border-hairline hover:border-navy text-navy px-3 py-1.5 rounded-sm transition-colors cursor-pointer"
+                  >
+                    Copy Address
+                  </button>
+                </div>
+                <div id="copy-feedback" class="hidden text-xs text-steelblue font-semibold mt-2" role="status"></div>
+              </div>
+
+              <div class="pt-4 border-t border-hairline">
+                <div class="text-xs font-display font-semibold uppercase tracking-wider text-slate">LinkedIn</div>
+                <div class="mt-1.5">
+                  <a
+                    href="https://www.linkedin.com/company/pioneer-impact-partners/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 font-display font-semibold text-sm text-navy hover:text-steelblue transition-colors"
+                  >
+                    <span>linkedin.com/company/pioneer-impact-partners</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-hairline">
+                <div class="text-xs font-display font-semibold uppercase tracking-wider text-slate">Marquee Initiative</div>
+                <div class="mt-1.5">
+                  <a
+                    href="oifi.html"
+                    class="inline-flex items-center gap-2 font-display font-semibold text-sm text-navy hover:text-steelblue transition-colors"
+                  >
+                    <span>Open Impact Finance Initiative (OIFI)</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Inquiry Form Routing to connect@pioneerimpactpartners.com -->
+          <div class="lg:col-span-7 bg-mist border border-hairline p-6 sm:p-8 rounded-md">
+            <form id="contact-form" class="space-y-5" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="sender-name" class="block text-xs font-display font-semibold uppercase tracking-wider text-navy mb-2">
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="sender-name"
+                    name="senderName"
+                    required
+                    placeholder="Full name"
+                    class="w-full bg-paper border border-hairline focus:border-navy focus:outline-none px-4 py-3 text-sm text-ink rounded-sm"
+                  />
+                </div>
+                <div>
+                  <label for="sender-email" class="block text-xs font-display font-semibold uppercase tracking-wider text-navy mb-2">
+                    Your Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="sender-email"
+                    name="senderEmail"
+                    required
+                    placeholder="name@organization.org"
+                    class="w-full bg-paper border border-hairline focus:border-navy focus:outline-none px-4 py-3 text-sm text-ink rounded-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="sender-org" class="block text-xs font-display font-semibold uppercase tracking-wider text-navy mb-2">
+                    Organization
+                  </label>
+                  <input
+                    type="text"
+                    id="sender-org"
+                    name="senderOrg"
+                    placeholder="Institution or initiative"
+                    class="w-full bg-paper border border-hairline focus:border-navy focus:outline-none px-4 py-3 text-sm text-ink rounded-sm"
+                  />
+                </div>
+                <div>
+                  <label for="inquiry-topic" class="block text-xs font-display font-semibold uppercase tracking-wider text-navy mb-2">
+                    Topic
+                  </label>
+                  <select
+                    id="inquiry-topic"
+                    name="topic"
+                    class="w-full bg-paper border border-hairline focus:border-navy focus:outline-none px-4 py-3 text-sm text-ink rounded-sm"
+                  >
+                    <option value="Open Architecture & Thesis">Open Architecture &amp; Thesis</option>
+                    <option value="Advisory & Governance">Advisory &amp; Governance</option>
+                    <option value="OIFI Ecosystem Collaboration">OIFI Ecosystem Collaboration</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="inquiry-message" class="block text-xs font-display font-semibold uppercase tracking-wider text-navy mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="inquiry-message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="How can Pioneer Impact Partners collaborate with your team or initiative?"
+                  class="w-full bg-paper border border-hairline focus:border-navy focus:outline-none px-4 py-3 text-sm text-ink rounded-sm"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
+                <span class="text-xs text-slate">
+                  Directs to <strong class="text-navy">connect@pioneerimpactpartners.com</strong>
+                </span>
+                <button
+                  type="submit"
+                  class="bg-navy hover:bg-midnight text-paper font-display font-semibold text-xs tracking-[0.12em] uppercase px-7 py-4 rounded-sm transition-colors cursor-pointer"
+                >
+                  Compose Email to PIP
+                </button>
+              </div>
+
+              <!-- Inline Status Box -->
+              <div id="form-status" class="hidden border-l-4 p-4 text-sm rounded-sm" role="status"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 9. INSTITUTIONAL NAVY FOOTER (#113157)                                -->
+  <!-- ===================================================================== -->
+  <footer class="bg-navy text-paper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-paper/15">
+
+        <!-- Left Brand Block -->
+        <div class="md:col-span-6 space-y-4">
+          <div class="flex items-center gap-3.5">
+            <svg width="36" height="36" viewBox="0 0 100 100" fill="none" aria-label="Pioneer Impact Partners Monogram" class="shrink-0">
+              <rect x="8" y="8" width="22" height="84" fill="#FFFFFF"/>
+              <path d="M38 8H66C82.5685 8 96 21.4315 96 38C96 54.5685 82.5685 68 66 68H38V48H65C70.5228 48 75 43.5228 75 38C75 32.4772 70.5228 28 65 28H38V8Z" fill="#FFFFFF"/>
+              <rect x="38" y="76" width="42" height="16" fill="#FFFFFF"/>
+            </svg>
+            <div>
+              <div class="font-display font-bold text-base tracking-tight text-paper">
+                PIONEER IMPACT PARTNERS
+              </div>
+              <div class="font-display font-semibold text-[10px] tracking-[0.14em] uppercase text-paper/75">
+                Open Architecture for Impact Finance
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-paper/80 max-w-md leading-relaxed">
+            Building open, reusable financial and legal market infrastructure and advising initiatives with senior practitioners across finance, law, governance, policy, research and impact.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="md:col-span-3 space-y-2.5">
+          <div class="font-display font-semibold text-xs uppercase tracking-[0.12em] text-icetint">Navigation</div>
+          <ul class="space-y-2 text-sm text-paper/80">
+            <li><a href="#thesis" class="hover:text-paper transition-colors">01 &middot; The Binding Constraint</a></li>
+            <li><a href="#open-architecture" class="hover:text-paper transition-colors">02 &middot; Open Architecture</a></li>
+            <li><a href="oifi.html" class="hover:text-paper transition-colors">03 &middot; Open Impact Finance Initiative</a></li>
+            <li><a href="#advisory" class="hover:text-paper transition-colors">04 &middot; Advisory &amp; Governance</a></li>
+            <li><a href="#leadership" class="hover:text-paper transition-colors">05 &middot; Practitioner Leadership</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & LinkedIn -->
+        <div class="md:col-span-3 space-y-2.5">
+          <div class="font-display font-semibold text-xs uppercase tracking-[0.12em] text-icetint">Connect</div>
+          <ul class="space-y-2 text-sm text-paper/80">
+            <li>
+              <a href="mailto:connect@pioneerimpactpartners.com" class="hover:text-paper transition-colors break-all">
+                connect@pioneerimpactpartners.com
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/pioneer-impact-partners/" target="_blank" rel="noopener noreferrer" class="hover:text-paper transition-colors">
+                LinkedIn &rarr;
+              </a>
+            </li>
+            <li>
+              <a href="oifi.html" class="hover:text-paper transition-colors">
+                OIFI Website &rarr;
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-paper/70">
+        <div>&copy; 2026 Pioneer Impact Partners. All rights reserved.</div>
+        <div>
+          Contact: <a href="mailto:connect@pioneerimpactpartners.com" class="underline hover:text-paper">connect@pioneerimpactpartners.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- 10. CLIENT-SIDE INTERACTIVITY                                        -->
+  <!-- ===================================================================== -->
+  <script>
+    (function () {
+      try {
+        // Mobile navigation drawer toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', function () {
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+            mobileMenu.classList.toggle('hidden');
+          });
+
+          mobileLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+              mobileMenu.classList.add('hidden');
+              menuBtn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+
+        // Copy connect@pioneerimpactpartners.com using execCommand fallback-safe helper
+        const copyBtn = document.getElementById('copy-email-btn');
+        const copyFeedback = document.getElementById('copy-feedback');
+        const targetEmail = 'connect@pioneerimpactpartners.com';
+
+        if (copyBtn && copyFeedback) {
+          copyBtn.addEventListener('click', function () {
+            let copied = false;
+            try {
+              const tempInput = document.createElement('textarea');
+              tempInput.value = targetEmail;
+              tempInput.setAttribute('readonly', '');
+              tempInput.style.position = 'absolute';
+              tempInput.style.left = '-9999px';
+              document.body.appendChild(tempInput);
+              tempInput.select();
+              copied = document.execCommand('copy');
+              document.body.removeChild(tempInput);
+            } catch (copyErr) {
+              copied = false;
+            }
+
+            copyFeedback.classList.remove('hidden');
+            if (copied) {
+              copyFeedback.textContent = 'Copied connect@pioneerimpactpartners.com to clipboard.';
+            } else {
+              copyFeedback.textContent = 'Email: connect@pioneerimpactpartners.com';
+            }
+          });
+        }
+
+        // Contact form handler routing to connect@pioneerimpactpartners.com
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        if (contactForm && formStatus) {
+          contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('sender-name');
+            const emailInput = document.getElementById('sender-email');
+            const orgInput = document.getElementById('sender-org');
+            const topicInput = document.getElementById('inquiry-topic');
+            const messageInput = document.getElementById('inquiry-message');
+
+            const name = nameInput ? nameInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const org = orgInput ? orgInput.value.trim() : '';
+            const topic = topicInput ? topicInput.value : 'General Inquiry';
+            const message = messageInput ? messageInput.value.trim() : '';
+
+            formStatus.classList.remove('hidden', 'bg-icetint', 'border-navy', 'text-navy', 'bg-mist', 'border-steelblue', 'text-ink');
+
+            if (!name || !email || !message) {
+              formStatus.classList.add('bg-mist', 'border-steelblue', 'text-ink');
+              formStatus.textContent = 'Please complete your name, email address and message before sending.';
+              return;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+              formStatus.classList.add('bg-mist', 'border-steelblue', 'text-ink');
+              formStatus.textContent = 'Please enter a valid email address.';
+              return;
+            }
+
+            const subject = encodeURIComponent('[PIP Inquiry - ' + topic + '] from ' + name);
+            const bodyLines = [
+              'Name: ' + name,
+              'Email: ' + email,
+              org ? 'Organization: ' + org : null,
+              'Topic: ' + topic,
+              '',
+              message
+            ].filter(Boolean).join('\n');
+
+            const mailtoUrl = 'mailto:' + targetEmail + '?subject=' + subject + '&body=' + encodeURIComponent(bodyLines);
+
+            formStatus.classList.add('bg-icetint', 'border-navy', 'text-navy');
+            formStatus.innerHTML =
+              '<strong>Ready to send to connect@pioneerimpactpartners.com.</strong> ' +
+              'Your email client should open automatically, or you can <a href="' + mailtoUrl + '" class="underline font-semibold">launch your mail draft here</a>.';
+
+            window.location.href = mailtoUrl;
+          });
+        }
+      } catch (err) {
+        // Fail gracefully without interrupting page rendering
+      }
+    })();
+  </script>
+</body>
+</html>
